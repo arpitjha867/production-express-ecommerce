@@ -9,13 +9,17 @@ import paymentRoutes from "./routes/paymentRoutes.js";
 import cors from "cors";
 import Razorpay from "razorpay";
 import bodyParser from "body-parser";
-import path from 'path'
+import path from 'path';
+import {fileURLToPath} from 'url';
 //configure env
 dotenv.config();
 
 //databse config
 connectDB();
 
+//esmodule
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 //rest object
 const app = express();
 
