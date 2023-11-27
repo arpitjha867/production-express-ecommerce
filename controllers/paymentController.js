@@ -21,7 +21,7 @@ export const checkoutFunc = async (req,res) =>{
         const orderObject = await new orderModel({
             razorpayOrderId : order?.id,
             products : cart,
-            buyer : auth?.user?._id
+            buyer : auth
         }).save()
         res.status(200).json({
             success:true,
