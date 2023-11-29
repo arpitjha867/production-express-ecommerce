@@ -58,7 +58,7 @@ export const paymentVerification = async (req,res) =>{
         });
     }
     res.redirect(
-      `http://localhost:3000/dashboard/user/orders`
+      `https://thankful-frog-bandanna.cyclic.app/dashboard/user/orders`
     );
     } catch (error) {
         console.log(error);
